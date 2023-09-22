@@ -16,7 +16,7 @@ aws s3 ls --no-sign-request s3://cellpainting-gallery/cpg0016-jump/
 
 ** using ls will show you all available paths that are within that folder.
 ** for example, using the above line will give you a list of sources
-**We will use Hanna's metadata code to find the path that we need
+**We will use Hannah's metadata code to find the path that we need
 
 **switch ls-->cp to download, and then type the file that you want to get onto your local device
 
