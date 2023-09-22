@@ -1,0 +1,47 @@
+USING COMMAND LINE FOR AWS:
+
+1. Install the package
+pip install awscli
+
+2.Configure your settings
+>>aws configure
+AWS Access Key ID [None]:
+AWS Secret Access Key [None]:
+Default region name [None]: us-east-1
+Defaul output format [None]: 
+
+3. Access the bucket 
+
+aws s3 ls --no-sign-request s3://cellpainting-gallery/cpg0016-jump/
+
+** using ls will show you all available paths that are within that folder.
+** for example, using the above line will give you a list of sources
+**We will use Hanna's metadata code to find the path that we need
+
+**switch ls-->cp to download, and then type the file that you want to get onto your local device
+
+aws s3 cp --no-sign-request s3://cellpainting-gallery/cpg0016-jump/source_1/workspace/profiles/Batch1_20221004/UL000109/UL000109.parquet UL000109.parquet
+
+**the above code will download UL000109.parquet to the path that you're currently in 
+** in my case this path is "C:\Users\Sepro" or whatever's next the lines you type on
+
+**to move to a specific path (ex: a folder called "parquet dowloads") you can use "cd":
+
+(base) C:\Users\Sepro>cd "parquet download"
+
+(base) c:\Users\Sepro\parquet download>
+
+**you can then run your commands and anything you download will go into that folder
+
+POSSIBLE ERRORS:
+
+"File association not found for file.py"
+
+1. close anaconda
+2. re-open as administrator
+3. open your terminal
+4. type assoc .py
+5. type Python.File="C:\Python27\python.exe" "%1" %*
+6. Should be good to go
+
+If it says something about not seeing aws make sure awscli is installed and configured
