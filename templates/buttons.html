@@ -1,0 +1,14 @@
+{% extends "layouts.html" %} <!-- we want this page to be in the layouts.html format  -->
+{% block title%}Buttons Page{% endblock %} <!-- the contents of these blocks are what will be placed in the layouts template  -->
+
+{% block content %}
+<form action="#" method="post"> <!-- form is how we send info to website, action is the url to redirect to when form submitted,
+  # means same page, method (get vs post), post means we will be taking the information from website, get means the website
+  takes the information from here. Default is get-->
+    <p>Click these buttons!</p>
+    <p><input type="submit" name = "action" value="button 1"</p> <!--input type for a button -->
+    <p><input type="submit" name = "action" value="button 12478"</p>
+    <p><input type="submit" name = "action" value="home"</p>
+    <p><input type="submit" name = "action" value="continue"</p>
+</form>
+{% endblock %}

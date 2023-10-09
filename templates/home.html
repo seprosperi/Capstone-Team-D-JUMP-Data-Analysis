@@ -1,0 +1,9 @@
+{% extends "layouts.html" %}
+{% block content %}
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>Case {{ post.subject }}</p>
+        <p>Finished on {{post.endexperiment }}</p>
+        <p> {{ post.content }} </p>
+    {% endfor %}
+{% endblock content %}

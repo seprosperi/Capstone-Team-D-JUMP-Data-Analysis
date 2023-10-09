@@ -1,0 +1,31 @@
+{% extends "layouts.html" %} <!-- we want this page to be in the layouts.html format  -->
+{% block title%}Query{% endblock %} <!-- the contents of these blocks are what will be placed in the layouts template  -->
+
+{% block content %}
+<form action="#" method="post">
+    <h1>Query Settings</h1>
+    <br></br>
+    <p>InChIkey : <input type="text" name = "inchikey"</p>
+    <p>Dimensionality Reduction Method :
+        <input list="drtech">
+        <datalist id = "drtech">
+            <option value = "PCA" />
+            <option value = "VAE" />
+            <option value = "ISOMAP" />
+            <option value = "UMAP" />
+        </datalist>
+    </p>
+    <p>Query Filter :
+        <input list="delim1">
+        <datalist id = "delim1">
+            <option value = "Cells" />
+            <option value = "Cytoplasm" />
+            <option value = "Nuclei" />
+            <option value = "Image" />
+        </datalist>
+    </p>
+    <p><input type="submit" name = "action" value="Query!"</p>
+
+</form>
+
+{% endblock %}
